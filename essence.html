@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Village Essence | Pinwatta Village Portal</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Tailwind Configuration & CSS -->
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .parallax-section {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .sensory-overlay {
+        background: linear-gradient(
+          45deg,
+          rgba(14, 165, 233, 0.9) 0%,
+          rgba(20, 184, 166, 0.8) 50%,
+          rgba(139, 69, 19, 0.9) 100%
+        );
+      }
+      @media (max-width: 768px) {
+        .parallax-section {
+          background-attachment: scroll;
+        }
+      }
+    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- External JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body
+    class="bg-light dark:bg-gray-900 text-slate-800 dark:text-gray-100 antialiased transition-colors duration-300"
+  >
+    <!-- =========== Header =========== -->
+    <header
+      id="header"
+      class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="text-2xl font-bold text-dark dark:text-white flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-primary"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Pinwatta Village
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary transition"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary transition"
+              >About</a
+            >
+            <a
+              href="culture.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary transition"
+              >Culture</a
+            >
+            <a
+              href="community.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary transition"
+              >Community</a
+            >
+            <a href="essence.html" class="text-primary font-semibold"
+              >Essence</a
+            >
+            <a
+              href="data.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary transition"
+              >Data Hub</a
+            >
+            <a
+              href="contact.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary transition"
+              >Contact</a
+            >
+            <button
+              id="theme-toggle"
+              class="ml-4 p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+              <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+            </button>
+          </nav>
+
+          <!-- Desktop CTA -->
+          <a
+            href="data.html"
+            class="hidden md:inline-block bg-primary text-white font-semibold px-6 py-2 rounded-lg hover:bg-primary-600 transition shadow-md hover:shadow-lg"
+          >
+            Explore Maps
+          </a>
+
+          <!-- Mobile Menu & Theme Toggle -->
+          <div class="flex items-center gap-2 md:hidden">
+            <button
+              id="mobile-theme-toggle"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+              <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+            </button>
+            <button
+              id="mobile-menu-button"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <i data-lucide="menu" class="h-5 w-5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-slate-200 dark:border-gray-700"
+      >
+        <a
+          href="index.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >About</a
+        >
+        <a
+          href="culture.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Culture</a
+        >
+        <a
+          href="community.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Community</a
+        >
+        <a
+          href="essence.html"
+          class="block py-3 px-6 text-primary bg-slate-50 dark:bg-gray-800"
+          >Essence</a
+        >
+        <a
+          href="data.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Data Hub</a
+        >
+        <a
+          href="contact.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Contact</a
+        >
+        <div class="p-4">
+          <a
+            href="data.html"
+            class="block w-full text-center bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-primary-600 transition"
+          >
+            Explore Maps
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- =========== Hero Section =========== -->
+      <section
+        class="parallax-section relative min-h-screen flex items-center justify-center"
+        style="
+          background-image: url('https://placehold.co/1920x1080/0ea5e9/ffffff?text=Pinwatta+Sunset');
+        "
+      >
+        <div class="sensory-overlay absolute inset-0"></div>
+        <div
+          class="container mx-auto px-6 relative z-10 text-center text-white"
+        >
+          <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+            Feel the <span class="text-cyan-200">Essence</span>
+          </h1>
+          <p
+            class="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed"
+          >
+            A Sensory and Valuational Journey Through Pinwatta's Daily Life
+          </p>
+          <div class="mt-12">
+            <i
+              data-lucide="chevron-down"
+              class="h-8 w-8 animate-bounce text-white mx-auto"
+            ></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== Morning in Pinwatta =========== -->
+      <section
+        class="py-20 md:py-28 bg-gradient-to-br from-amber-50 to-orange-100"
+      >
+        <div class="container mx-auto px-6">
+          <div class="text-center max-w-4xl mx-auto mb-16">
+            <span class="text-orange-600 font-semibold text-lg"
+              >DAWN BREAKS</span
+            >
+            <h2
+              class="text-3xl md:text-5xl font-bold text-dark dark:text-white mt-2 mb-6"
+            >
+              Morning Awakening
+            </h2>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div class="prose prose-lg prose-slate max-w-none">
+                <p class="text-lg leading-relaxed text-slate-700 mb-6">
+                  The day begins gently in Pinwatta, as the first golden rays of
+                  sunrise paint the Indian Ocean in brilliant hues. The rhythmic
+                  sound of waves creates nature's own alarm clock, a soothing
+                  symphony that awakens the village with peaceful persistence.
+                </p>
+                <p class="text-lg leading-relaxed text-slate-700 mb-6">
+                  Along the narrow streets, the aroma of freshly brewed tea and
+                  <em>hoppers</em> being prepared drifts from kitchen windows.
+                  Children in crisp white school uniforms walk along Galle Road,
+                  their laughter mixing with the gentle morning breeze that
+                  carries the salt-sweet scent of the sea.
+                </p>
+                <p class="text-lg leading-relaxed text-slate-700">
+                  The railway station comes alive with the distant whistle of
+                  the morning train to Colombo, while
+                  <em>three-wheeler</em> drivers start their engines, ready to
+                  connect commuters to their daily journeys. This is the quiet
+                  magic of Pinwatta mornings - unhurried yet purposeful.
+                </p>
+              </div>
+            </div>
+            <div>
+              <img
+                src="https://placehold.co/600x500/f97316/ffffff?text=Morning+Village"
+                alt="Morning scene in Pinwatta village"
+                class="rounded-2xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
+
+          <!-- Sensory Elements -->
+          <div class="grid md:grid-cols-4 gap-6 mt-16">
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div
+                class="bg-yellow-100 text-yellow-600 h-12 w-12 rounded-full flex items-center justify-center mb-4 mx-auto"
+              >
+                <i data-lucide="sunrise" class="h-6 w-6"></i>
+              </div>
+              <h4 class="font-bold text-dark dark:text-white mb-2">
+                Golden Light
+              </h4>
+              <p class="text-slate-600 dark:text-gray-300 text-sm">
+                Warm sunrise over the ocean
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div
+                class="bg-blue-100 text-blue-600 h-12 w-12 rounded-full flex items-center justify-center mb-4 mx-auto"
+              >
+                <i data-lucide="waves" class="h-6 w-6"></i>
+              </div>
+              <h4 class="font-bold text-dark dark:text-white mb-2">
+                Ocean Rhythm
+              </h4>
+              <p class="text-slate-600 dark:text-gray-300 text-sm">
+                Gentle waves on the shore
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div
+                class="bg-green-100 text-green-600 h-12 w-12 rounded-full flex items-center justify-center mb-4 mx-auto"
+              >
+                <i data-lucide="coffee" class="h-6 w-6"></i>
+              </div>
+              <h4 class="font-bold text-dark dark:text-white mb-2">
+                Morning Aromas
+              </h4>
+              <p class="text-slate-600 dark:text-gray-300 text-sm">
+                Tea and breakfast scents
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div
+                class="bg-purple-100 text-purple-600 h-12 w-12 rounded-full flex items-center justify-center mb-4 mx-auto"
+              >
+                <i data-lucide="users" class="h-6 w-6"></i>
+              </div>
+              <h4 class="font-bold text-dark dark:text-white mb-2">
+                Community Life
+              </h4>
+              <p class="text-slate-600 dark:text-gray-300 text-sm">
+                Children and commuters
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== Midday Energy =========== -->
+      <section
+        class="py-20 md:py-28 bg-white dark:bg-gray-800 transition-colors duration-300"
+      >
+        <div class="container mx-auto px-6">
+          <div class="text-center max-w-4xl mx-auto mb-16">
+            <span class="text-blue-600 dark:text-blue-400 font-semibold text-lg"
+              >HIGH NOON</span
+            >
+            <h2
+              class="text-3xl md:text-5xl font-bold text-dark dark:text-white mt-2 mb-6"
+            >
+              Vibrant Pulse
+            </h2>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src="https://placehold.co/600x500/14b8a6/ffffff?text=Midday+Market"
+                alt="Bustling midday activities"
+                class="rounded-2xl shadow-2xl w-full"
+              />
+            </div>
+            <div>
+              <div class="prose prose-lg prose-slate max-w-none">
+                <p class="text-lg leading-relaxed text-slate-700 mb-6">
+                  By midday, Pinwatta transforms into a hive of gentle activity.
+                  The local market awakens with vendors arranging colorful
+                  displays of tropical fruits, fresh fish from the morning
+                  catch, and vegetables grown in nearby gardens. The air fills
+                  with animated conversations in Sinhala, Tamil, and the
+                  occasional English phrase.
+                </p>
+                <p class="text-lg leading-relaxed text-slate-700 mb-6">
+                  Under the warm tropical sun, the temperature rises but the
+                  coastal breeze provides natural air conditioning. Palm trees
+                  sway lazily, their fronds creating moving patterns of shade
+                  and light on the sandy paths. The sound of bicycles and the
+                  occasional <em>tuk-tuk</em> creates the village's
+                  characteristic midday rhythm.
+                </p>
+                <p class="text-lg leading-relaxed text-slate-700">
+                  At the temple, the noon offering sees devotees gathering
+                  briefly for prayers, the scent of incense mixing with the
+                  natural fragrances of frangipani and jasmine that bloom in
+                  temple gardens. This is Pinwatta in full swing - busy yet
+                  peaceful, traditional yet modern.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== Evening Serenity =========== -->
+      <section
+        class="parallax-section relative py-20 md:py-28"
+        style="
+          background-image: url('https://placehold.co/1920x800/f97316/ffffff?text=Sunset+Beach');
+        "
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-orange-900/80 via-red-900/60 to-transparent"
+        ></div>
+        <div class="container mx-auto px-6 relative z-10">
+          <div class="text-center max-w-4xl mx-auto mb-16 text-white">
+            <span class="text-orange-200 font-semibold text-lg"
+              >GOLDEN HOUR</span
+            >
+            <h2 class="text-3xl md:text-5xl font-bold mt-2 mb-6">
+              Evening Tranquility
+            </h2>
+          </div>
+
+          <div class="max-w-4xl mx-auto text-white">
+            <div class="prose prose-lg prose-white max-w-none">
+              <p class="text-lg leading-relaxed mb-6 text-orange-50">
+                As evening approaches, Pinwatta reveals perhaps its most magical
+                character. The beach becomes a communal living room where
+                families gather to watch the sun paint the sky in magnificent
+                oranges and purples. Children play cricket on the sand while
+                their parents share stories and watch the waves.
+              </p>
+              <p class="text-lg leading-relaxed mb-6 text-orange-50">
+                The evening train arrives with its familiar whistle, bringing
+                home those who work in Panadura and Colombo. The reunion of
+                families creates a warm energy that spreads through the village
+                streets. Street vendors appear with <em>isso vadé</em> and cool
+                drinks, their calls mixing with the sound of waves and distant
+                temple bells.
+              </p>
+              <p class="text-lg leading-relaxed text-orange-50">
+                This is the time when Pinwatta's true essence emerges - in the
+                spontaneous conversations between neighbors, in the way
+                strangers nod and smile, in the peaceful coexistence of modern
+                life with ancient rhythms. The village breathes contentment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== The Urban-Suburban Balance =========== -->
+      <section class="py-20 md:py-28 bg-slate-50">
+        <div class="container mx-auto px-6">
+          <div class="text-center max-w-4xl mx-auto mb-16">
+            <span
+              class="text-slate-600 dark:text-gray-300 font-semibold text-lg"
+              >HARMONY</span
+            >
+            <h2
+              class="text-3xl md:text-5xl font-bold text-dark dark:text-white mt-2 mb-6"
+            >
+              Urban Meets Suburban
+            </h2>
+            <p
+              class="text-xl text-slate-600 dark:text-gray-300 leading-relaxed"
+            >
+              Pinwatta's unique position as a peaceful suburban enclave with
+              urban connectivity creates a living environment that offers the
+              best of both worlds.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <!-- Urban Benefits -->
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+              <div
+                class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 h-16 w-16 rounded-full flex items-center justify-center mb-6"
+              >
+                <i data-lucide="building" class="h-8 w-8"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-dark dark:text-white mb-4">
+                Urban Advantages
+              </h3>
+              <ul class="space-y-3 text-slate-600 dark:text-gray-300">
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check-circle"
+                    class="h-5 w-5 text-green-600 dark:text-green-400 mt-1 mr-3 flex-shrink-0"
+                  ></i>
+                  <span
+                    >Easy access to Colombo and major cities via rail and
+                    road</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check-circle"
+                    class="h-5 w-5 text-green-600 dark:text-green-400 mt-1 mr-3 flex-shrink-0"
+                  ></i>
+                  <span
+                    >Modern amenities including healthcare and education</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check-circle"
+                    class="h-5 w-5 text-green-600 dark:text-green-400 mt-1 mr-3 flex-shrink-0"
+                  ></i>
+                  <span>Employment opportunities in diverse sectors</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check-circle"
+                    class="h-5 w-5 text-green-600 dark:text-green-400 mt-1 mr-3 flex-shrink-0"
+                  ></i>
+                  <span>Shopping and commercial facilities</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Suburban Peace -->
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+              <div
+                class="bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 h-16 w-16 rounded-full flex items-center justify-center mb-6"
+              >
+                <i data-lucide="leaf" class="h-8 w-8"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-dark dark:text-white mb-4">
+                Suburban Tranquility
+              </h3>
+              <ul class="space-y-3 text-slate-600 dark:text-gray-300">
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check-circle"
+                    class="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0"
+                  ></i>
+                  <span>Peaceful coastal environment away from city noise</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check-circle"
+                    class="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0"
+                  ></i>
+                  <span
+                    >Strong community bonds and neighborly relationships</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check-circle"
+                    class="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0"
+                  ></i>
+                  <span>Safe environment for families and children</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check-circle"
+                    class="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0"
+                  ></i>
+                  <span>Preserved cultural heritage and traditions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Balance Illustration -->
+          <div class="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
+            <div class="text-center mb-8">
+              <h3 class="text-2xl font-bold text-dark dark:text-white mb-4">
+                Perfect Balance
+              </h3>
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg max-w-3xl mx-auto"
+              >
+                This unique equilibrium allows residents to enjoy career
+                opportunities and modern conveniences while maintaining the
+                peaceful, community-centered lifestyle that defines quality
+                living.
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div class="bg-blue-50 p-6 rounded-xl mb-4">
+                  <i
+                    data-lucide="clock"
+                    class="h-12 w-12 text-blue-600 mx-auto mb-2"
+                  ></i>
+                  <div class="text-2xl font-bold text-blue-600">45 min</div>
+                </div>
+                <h4 class="font-bold text-dark dark:text-white">
+                  Quick Commute
+                </h4>
+                <p class="text-slate-600 dark:text-gray-300 text-sm">
+                  to Colombo's business district
+                </p>
+              </div>
+              <div>
+                <div class="bg-green-50 p-6 rounded-xl mb-4">
+                  <i
+                    data-lucide="home"
+                    class="h-12 w-12 text-green-600 mx-auto mb-2"
+                  ></i>
+                  <div class="text-2xl font-bold text-green-600">24/7</div>
+                </div>
+                <h4 class="font-bold text-dark dark:text-white">
+                  Peaceful Living
+                </h4>
+                <p class="text-slate-600 dark:text-gray-300 text-sm">
+                  in a safe, quiet environment
+                </p>
+              </div>
+              <div>
+                <div class="bg-purple-50 p-6 rounded-xl mb-4">
+                  <i
+                    data-lucide="heart"
+                    class="h-12 w-12 text-purple-600 mx-auto mb-2"
+                  ></i>
+                  <div class="text-2xl font-bold text-purple-600">100%</div>
+                </div>
+                <h4 class="font-bold text-dark dark:text-white">
+                  Quality of Life
+                </h4>
+                <p class="text-slate-600 dark:text-gray-300 text-sm">
+                  combining convenience and community
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== Personal Reflection =========== -->
+      <section
+        class="py-20 md:py-28 bg-gradient-to-br from-slate-100 to-blue-50"
+      >
+        <div class="container mx-auto px-6">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-12">
+              <span
+                class="text-slate-600 dark:text-gray-300 font-semibold text-lg"
+                >REFLECTION</span
+              >
+              <h2
+                class="text-3xl md:text-5xl font-bold text-dark dark:text-white mt-2 mb-8"
+              >
+                The True Significance
+              </h2>
+            </div>
+
+            <!-- Main Quote Block -->
+            <div class="bg-white rounded-2xl p-8 md:p-16 shadow-2xl relative">
+              <div
+                class="absolute top-6 left-6 text-6xl text-primary/20 font-serif"
+              >
+                "
+              </div>
+              <div class="relative z-10">
+                <p
+                  class="text-2xl md:text-3xl font-light text-slate-700 leading-relaxed italic mb-8"
+                >
+                  Its genuine significance lies in how it makes daily living
+                  easier for its residents.
+                </p>
+                <div
+                  class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"
+                ></div>
+                <p
+                  class="text-lg text-slate-600 dark:text-gray-300 leading-relaxed mb-8"
+                >
+                  Pinwatta's essence cannot be captured in tourist brochures or
+                  development statistics. It lives in the everyday moments - the
+                  morning greeting between neighbors, the evening train that
+                  brings families together, the seamless blend of ancient temple
+                  bells with modern conveniences.
+                </p>
+                <p
+                  class="text-lg text-slate-600 dark:text-gray-300 leading-relaxed mb-8"
+                >
+                  This is a place where tradition and progress dance together,
+                  where the rhythm of the ocean harmonizes with the pulse of
+                  contemporary life. Where children grow up knowing both their
+                  cultural roots and their limitless possibilities.
+                </p>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                  In Pinwatta, we haven't just created a community; we've
+                  crafted a way of life that honors the past while embracing the
+                  future, proving that true development means making life not
+                  just more prosperous, but more meaningful.
+                </p>
+              </div>
+              <div
+                class="absolute bottom-6 right-6 text-6xl text-secondary/20 font-serif"
+              >
+                "
+              </div>
+            </div>
+
+            <!-- Attribution -->
+            <div class="mt-12 text-center">
+              <p class="text-slate-500 italic">
+                — A reflection on Pinwatta Village life
+              </p>
+              <p class="text-slate-400 text-sm mt-2">
+                W. K. Y. Aranasinghe | PL1105 Village Study
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========== Footer =========== -->
+    <footer class="bg-dark text-white">
+      <div class="container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- About Column -->
+          <div class="md:col-span-2">
+            <h3 class="text-xl font-bold mb-4">Pinwatta Village Portal</h3>
+            <p class="text-slate-400 max-w-md">
+              Celebrating the rich heritage and vibrant community of Pinwatta,
+              where coastal beauty meets cultural depth in perfect harmony.
+            </p>
+          </div>
+          <!-- Links Column -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Explore</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="about.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >About Pinwatta</a
+                >
+              </li>
+              <li>
+                <a
+                  href="culture.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Culture & Arts</a
+                >
+              </li>
+              <li>
+                <a
+                  href="community.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Our Community</a
+                >
+              </li>
+              <li>
+                <a
+                  href="data.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Maps & Data</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Report Info Column -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Report Info</h3>
+            <p class="text-slate-400 text-sm mb-2">
+              Report by W. K. Y. Aranasinghe
+            </p>
+            <p class="text-slate-400 text-sm mb-4">Student ID: 242343J</p>
+            <p class="text-slate-400 text-xs">
+              PL1105 Assignment - University of Moratuwa
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-12 border-t border-slate-700 pt-8 text-center text-slate-500 dark:text-gray-400 text-sm"
+        >
+          <p>&copy; 2025 Pinwatta Village Showcase. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

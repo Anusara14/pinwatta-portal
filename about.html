@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Pinwatta | A Mosaic of Memory and Modernity</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- External JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body
+    class="bg-light dark:bg-gray-900 text-slate-800 dark:text-gray-100 antialiased transition-colors duration-300"
+  >
+    <!-- =========== Header =========== -->
+    <header
+      id="header"
+      class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="text-2xl font-bold text-dark dark:text-white flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-primary"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Pinwatta Village
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-6">
+            <a
+              href="index.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >Home</a
+            >
+            <a href="about.html" class="text-primary font-semibold">About</a>
+            <a
+              href="culture.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >Culture</a
+            >
+            <a
+              href="community.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >Community</a
+            >
+            <a
+              href="essence.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >Essence</a
+            >
+            <a
+              href="data.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >Data Hub</a
+            >
+            <a
+              href="contact.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >Contact</a
+            >
+
+            <!-- Theme Toggle -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <i data-lucide="sun" class="h-5 w-5 hidden dark:block"></i>
+              <i data-lucide="moon" class="h-5 w-5 block dark:hidden"></i>
+            </button>
+          </nav>
+
+          <!-- Desktop CTA -->
+          <a
+            href="data.html"
+            class="hidden lg:inline-block bg-primary text-white font-semibold px-6 py-2 rounded-lg hover:bg-primary-600 transition shadow-md hover:shadow-lg"
+          >
+            Explore Maps
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden">
+            <i data-lucide="menu" class="h-6 w-6 text-dark dark:text-white"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-slate-200 dark:border-gray-700"
+      >
+        <a
+          href="index.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="block py-3 px-6 text-primary bg-slate-50 dark:bg-gray-800"
+          >About</a
+        >
+        <a
+          href="culture.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Culture</a
+        >
+        <a
+          href="community.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Community</a
+        >
+        <a
+          href="essence.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Essence</a
+        >
+        <a
+          href="data.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Data Hub</a
+        >
+        <a
+          href="contact.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Contact</a
+        >
+
+        <!-- Mobile Theme Toggle -->
+        <div class="px-6 py-3">
+          <button
+            id="mobile-theme-toggle"
+            class="flex items-center space-x-3 w-full p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          >
+            <i data-lucide="sun" class="h-5 w-5 hidden dark:block"></i>
+            <i data-lucide="moon" class="h-5 w-5 block dark:hidden"></i>
+            <span class="text-sm font-medium">Toggle Theme</span>
+          </button>
+        </div>
+
+        <div class="p-4">
+          <a
+            href="data.html"
+            class="block w-full text-center bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-primary-600 transition"
+          >
+            Explore Maps
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- =========== Hero Section =========== -->
+      <section class="relative bg-slate-800 text-white py-20 md:py-28">
+        <div class="absolute inset-0">
+          <img
+            src="https://placehold.co/1920x600/0ea5e9/ffffff?text=Pinwatta+Village+Panorama"
+            alt="Panoramic view of Pinwatta Village"
+            class="w-full h-full object-cover opacity-30"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent"
+          ></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+            About <span class="text-primary">Pinwatta</span>
+          </h1>
+          <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+            Discover the story of our unique village - where ancient heritage
+            meets modern convenience along the beautiful coast of Panadura, Sri
+            Lanka.
+          </p>
+        </div>
+      </section>
+
+      <!-- =========== Introduction Section =========== -->
+      <section class="py-20 md:py-28 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span class="text-primary font-semibold text-lg"
+                >INTRODUCTION</span
+              >
+              <h2
+                class="text-3xl md:text-4xl font-bold text-dark dark:text-white mt-2 mb-6"
+              >
+                A Village of Character and Convenience
+              </h2>
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg mb-6 leading-relaxed"
+              >
+                Nestled along the scenic coast of Panadura in Sri Lanka's
+                Western Province, Pinwatta represents a unique suburban enclave
+                where traditional village life harmoniously coexists with modern
+                urban conveniences. This distinctive community, strategically
+                positioned along the historic Galle Road, has evolved into a
+                vibrant mosaic of cultural heritage and contemporary living.
+              </p>
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg mb-6 leading-relaxed"
+              >
+                What sets Pinwatta apart is its remarkable ability to maintain
+                its authentic village character while offering residents all the
+                amenities of modern suburban life. From the ancient Rankoth
+                Viharaya temple that has watched over the community for over two
+                centuries, to the bustling railway station that connects our
+                village to the wider world, Pinwatta embodies the perfect
+                balance between preservation and progress.
+              </p>
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed"
+              >
+                The village's coastal location provides not just scenic beauty,
+                but a deep connection to Sri Lanka's maritime heritage. The
+                rhythmic sounds of the ocean waves, combined with the daily
+                pulse of community life, create an atmosphere that is both
+                peaceful and dynamic - a place where residents enjoy the
+                tranquility of village life without sacrificing urban
+                conveniences.
+              </p>
+            </div>
+            <div>
+              <img
+                src="https://placehold.co/600x500/e0f2fe/0ea5e9?text=Village+Overview"
+                alt="Overview of Pinwatta Village"
+                class="rounded-xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== Legacy Section =========== -->
+      <section class="py-20 md:py-28 bg-light dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+          <!-- Section Header -->
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-secondary font-semibold text-lg">LEGACY</span>
+            <h2
+              class="text-3xl md:text-4xl font-bold text-dark dark:text-white mt-2 mb-4"
+            >
+              Pioneers of the Waves
+            </h2>
+            <p class="text-slate-600 dark:text-gray-300 text-lg">
+              The year 1968 marked a revolutionary moment in Pinwatta's history
+              when local youth became pioneers of Sri Lankan surfing culture.
+            </p>
+          </div>
+
+          <!-- Legacy Story -->
+          <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+              <img
+                src="https://placehold.co/600x400/f4a261/ffffff?text=Vintage+Surfing+1968"
+                alt="Vintage surfing scene from 1968"
+                class="rounded-xl shadow-2xl w-full"
+              />
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark dark:text-white mb-4">
+                The Birth of Sri Lankan Surf Culture
+              </h3>
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg mb-6 leading-relaxed"
+              >
+                In the transformative year of 1968, a group of adventurous young
+                locals in Pinwatta witnessed something that would forever change
+                our village's identity. Inspired by visiting surfers who rode
+                the waves along our coast, these pioneering youth decided to
+                craft their own surfboards from available materials - wood,
+                styrofoam, and sheer determination.
+              </p>
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg mb-6 leading-relaxed"
+              >
+                What began as curiosity quickly evolved into passion. These
+                early surf enthusiasts didn't just learn to ride the waves; they
+                became the founding fathers of Sri Lankan surf culture. Their
+                innovative spirit and deep connection to the ocean established
+                Pinwatta as one of the island's premier surfing destinations.
+              </p>
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed"
+              >
+                This legacy continues to influence our village today. The
+                surfing heritage has become an integral part of Pinwatta's
+                identity, attracting visitors from around the world while
+                maintaining the authentic, community-centered approach that
+                defined those original surf pioneers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cultural Impact -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl p-8 md:p-12 shadow-lg"
+          >
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div
+                  class="bg-sky-100 dark:bg-sky-900 text-primary h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                >
+                  <i data-lucide="waves" class="h-8 w-8"></i>
+                </div>
+                <h4 class="text-xl font-bold text-dark dark:text-white mb-2">
+                  Innovation
+                </h4>
+                <p class="text-slate-600 dark:text-gray-300">
+                  Crafting surfboards from local materials demonstrated
+                  remarkable innovation and resourcefulness.
+                </p>
+              </div>
+              <div>
+                <div
+                  class="bg-teal-100 dark:bg-teal-900 text-secondary h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                >
+                  <i data-lucide="users" class="h-8 w-8"></i>
+                </div>
+                <h4 class="text-xl font-bold text-dark dark:text-white mb-2">
+                  Community
+                </h4>
+                <p class="text-slate-600 dark:text-gray-300">
+                  The surfing movement brought young people together, creating
+                  lasting bonds and shared identity.
+                </p>
+              </div>
+              <div>
+                <div
+                  class="bg-sky-100 dark:bg-sky-900 text-primary h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                >
+                  <i data-lucide="award" class="h-8 w-8"></i>
+                </div>
+                <h4 class="text-xl font-bold text-dark dark:text-white mb-2">
+                  Heritage
+                </h4>
+                <p class="text-slate-600 dark:text-gray-300">
+                  Established Pinwatta's reputation as a birthplace of Sri
+                  Lankan surf culture and coastal recreation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== Evolution Section =========== -->
+      <section class="py-20 md:py-28 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+          <!-- Section Header -->
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-primary font-semibold text-lg">EVOLUTION</span>
+            <h2
+              class="text-3xl md:text-4xl font-bold text-dark dark:text-white mt-2 mb-4"
+            >
+              Rankoth Viharaya: Sacred Chronicles
+            </h2>
+            <p class="text-slate-600 dark:text-gray-300 text-lg">
+              For over two centuries, the Rankoth Viharaya temple has served as
+              the spiritual anchor and cultural heart of our community.
+            </p>
+          </div>
+
+          <!-- Temple History -->
+          <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 class="text-2xl font-bold text-dark dark:text-white mb-4">
+                A Foundation Built on Faith
+              </h3>
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg mb-6 leading-relaxed"
+              >
+                Established in 1810, the Rankoth Viharaya temple represents more
+                than just a place of worship - it is the living chronicle of
+                Pinwatta's spiritual and cultural evolution. For over 215 years,
+                this sacred space has witnessed the transformation of our
+                village while maintaining its role as a beacon of Buddhist
+                teachings and community gathering.
+              </p>
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg mb-6 leading-relaxed"
+              >
+                The temple's founding marked the beginning of organized
+                spiritual life in Pinwatta. As families settled around this
+                sacred center, the Viharaya became not just a place for
+                religious observance, but the focal point around which community
+                life organized itself. Festival celebrations, cultural events,
+                and important community decisions have all centered around this
+                spiritual hub.
+              </p>
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed"
+              >
+                Today, the Rankoth Viharaya continues to serve multiple
+                generations of families, many of whom have been connected to
+                this temple since its earliest days. The continuity of spiritual
+                practice across centuries has created an unbroken chain of
+                cultural transmission that defines much of Pinwatta's character.
+              </p>
+            </div>
+            <div>
+              <img
+                src="https://placehold.co/600x500/d4a574/ffffff?text=Rankoth+Viharaya+Temple"
+                alt="Historic Rankoth Viharaya Temple"
+                class="rounded-xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="bg-slate-50 dark:bg-gray-700 rounded-xl p-8 md:p-12">
+            <h3
+              class="text-2xl font-bold text-dark dark:text-white mb-8 text-center"
+            >
+              Temple Timeline
+            </h3>
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-6"
+                >
+                  1810
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold text-dark dark:text-white">
+                    Foundation
+                  </h4>
+                  <p class="text-slate-600 dark:text-gray-300 mt-1">
+                    Rankoth Viharaya temple established, becoming the spiritual
+                    center of the emerging Pinwatta community.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-12 w-12 rounded-full bg-secondary text-white flex items-center justify-center font-bold mr-6"
+                >
+                  1850s
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold text-dark dark:text-white">
+                    Growth
+                  </h4>
+                  <p class="text-slate-600 dark:text-gray-300 mt-1">
+                    Temple community expands as more families settle in the
+                    area, drawn by the spiritual and social center.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-6"
+                >
+                  1900s
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold text-dark dark:text-white">
+                    Cultural Hub
+                  </h4>
+                  <p class="text-slate-600 dark:text-gray-300 mt-1">
+                    Becomes the center for traditional festivals, cultural
+                    education, and community decision-making.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-12 w-12 rounded-full bg-secondary text-white flex items-center justify-center font-bold mr-6"
+                >
+                  Today
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold text-dark dark:text-white">
+                    Living Heritage
+                  </h4>
+                  <p class="text-slate-600 dark:text-gray-300 mt-1">
+                    Continues as an active spiritual center, preserving
+                    traditions while adapting to contemporary community needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== Modern Integration Section =========== -->
+      <section class="py-20 md:py-28 bg-light dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2
+              class="text-3xl md:text-4xl font-bold text-dark dark:text-white mb-4"
+            >
+              Where Past Meets Present
+            </h2>
+            <p class="text-slate-600 dark:text-gray-300 text-lg">
+              Today's Pinwatta seamlessly integrates its rich historical legacy
+              with modern suburban conveniences, creating a unique living
+              environment.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Historical Preservation -->
+            <div
+              class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300"
+            >
+              <div
+                class="bg-amber-100 dark:bg-amber-900 text-amber-600 h-14 w-14 rounded-full flex items-center justify-center mb-5"
+              >
+                <i data-lucide="landmark" class="h-7 w-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-3">
+                Historical Preservation
+              </h3>
+              <p class="text-slate-600 dark:text-gray-300">
+                Careful preservation of cultural landmarks like Rankoth Viharaya
+                while allowing for thoughtful development.
+              </p>
+            </div>
+
+            <!-- Modern Amenities -->
+            <div
+              class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300"
+            >
+              <div
+                class="bg-green-100 dark:bg-green-900 text-green-600 h-14 w-14 rounded-full flex items-center justify-center mb-5"
+              >
+                <i data-lucide="building-2" class="h-7 w-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-3">
+                Modern Infrastructure
+              </h3>
+              <p class="text-slate-600 dark:text-gray-300">
+                Contemporary housing, reliable utilities, and modern
+                transportation links that connect us to the wider region.
+              </p>
+            </div>
+
+            <!-- Community Balance -->
+            <div
+              class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 md:col-span-2 lg:col-span-1"
+            >
+              <div
+                class="bg-blue-100 dark:bg-blue-900 text-blue-600 h-14 w-14 rounded-full flex items-center justify-center mb-5"
+              >
+                <i data-lucide="balance-scale" class="h-7 w-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-3">
+                Cultural Balance
+              </h3>
+              <p class="text-slate-600 dark:text-gray-300">
+                Maintaining traditional values and practices while embracing
+                beneficial aspects of modernization and connectivity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========== Footer =========== -->
+    <footer class="bg-dark text-white">
+      <div class="container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- About Column -->
+          <div class="md:col-span-2">
+            <h3 class="text-xl font-bold mb-4">Pinwatta Village Portal</h3>
+            <p class="text-slate-400 max-w-md">
+              Celebrating the rich heritage and vibrant community of Pinwatta,
+              where coastal beauty meets cultural depth in perfect harmony.
+            </p>
+          </div>
+          <!-- Links Column -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Explore</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="about.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >About Pinwatta</a
+                >
+              </li>
+              <li>
+                <a
+                  href="culture.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Culture & Arts</a
+                >
+              </li>
+              <li>
+                <a
+                  href="community.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Our Community</a
+                >
+              </li>
+              <li>
+                <a
+                  href="data.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Maps & Data</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Report Info Column -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Report Info</h3>
+            <p class="text-slate-400 text-sm mb-2">
+              Report by W. K. Y. Aranasinghe
+            </p>
+            <p class="text-slate-400 text-sm mb-4">Student ID: 242343J</p>
+            <p class="text-slate-400 text-xs">
+              PL1105 Assignment - University of Moratuwa
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-12 border-t border-slate-700 pt-8 text-center text-slate-500 text-sm"
+        >
+          <p>&copy; 2025 Pinwatta Village Showcase. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

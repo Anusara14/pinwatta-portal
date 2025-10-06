@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Community | Pinwatta Village Portal</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Tailwind Configuration & CSS -->
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .stat-card {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      }
+      .progress-bar {
+        background: linear-gradient(90deg, #0ea5e9 0%, #14b8a6 100%);
+      }
+    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- External JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body
+    class="bg-light dark:bg-gray-900 text-slate-800 dark:text-gray-100 antialiased transition-colors duration-300"
+  >
+    <!-- =========== Header =========== -->
+    <header
+      id="header"
+      class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="text-2xl font-bold text-dark dark:text-white flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-primary"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Pinwatta Village
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-6">
+            <a
+              href="index.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >About</a
+            >
+            <a
+              href="culture.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >Culture</a
+            >
+            <a href="community.html" class="text-primary font-semibold"
+              >Community</a
+            >
+            <a
+              href="essence.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >Essence</a
+            >
+            <a
+              href="data.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >Data Hub</a
+            >
+            <a
+              href="contact.html"
+              class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+              >Contact</a
+            >
+
+            <!-- Theme Toggle -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <i data-lucide="sun" class="h-5 w-5 hidden dark:block"></i>
+              <i data-lucide="moon" class="h-5 w-5 block dark:hidden"></i>
+            </button>
+          </nav>
+
+          <!-- Desktop CTA -->
+          <a
+            href="data.html"
+            class="hidden lg:inline-block bg-primary text-white font-semibold px-6 py-2 rounded-lg hover:bg-primary-600 transition shadow-md hover:shadow-lg"
+          >
+            Explore Maps
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden">
+            <i data-lucide="menu" class="h-6 w-6 text-dark dark:text-white"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-slate-200 dark:border-gray-700"
+      >
+        <a
+          href="index.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >About</a
+        >
+        <a
+          href="culture.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Culture</a
+        >
+        <a
+          href="community.html"
+          class="block py-3 px-6 text-primary bg-slate-50 dark:bg-gray-800"
+          >Community</a
+        >
+        <a
+          href="essence.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Essence</a
+        >
+        <a
+          href="data.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Data Hub</a
+        >
+        <a
+          href="contact.html"
+          class="block py-3 px-6 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-gray-800"
+          >Contact</a
+        >
+
+        <!-- Mobile Theme Toggle -->
+        <div class="px-6 py-3">
+          <button
+            id="mobile-theme-toggle"
+            class="flex items-center justify-center w-full p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          >
+            <i data-lucide="sun" class="h-5 w-5 hidden dark:block"></i>
+            <i data-lucide="moon" class="h-5 w-5 block dark:hidden"></i>
+          </button>
+        </div>
+
+        <div class="p-4">
+          <a
+            href="data.html"
+            class="block w-full text-center bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-primary-600 transition"
+          >
+            Explore Maps
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- =========== Hero Section =========== -->
+      <section
+        class="relative bg-gradient-to-br from-teal-600 via-blue-600 to-indigo-600 text-white py-20 md:py-28"
+      >
+        <div class="absolute inset-0">
+          <img
+            src="https://placehold.co/1920x600/14b8a6/ffffff?text=Community+Life"
+            alt="Community life in Pinwatta Village"
+            class="w-full h-full object-cover opacity-20"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-teal-900/80 via-blue-900/60 to-transparent"
+          ></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+            Our <span class="text-cyan-200">Community</span>
+          </h1>
+          <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
+            Discover what makes Pinwatta special - the people, the connections,
+            and the vibrant life that defines our coastal village.
+          </p>
+        </div>
+      </section>
+
+      <!-- =========== The Village's Pulse Section =========== -->
+      <section
+        class="py-20 md:py-28 bg-white dark:bg-gray-800 transition-colors duration-300"
+      >
+        <div class="container mx-auto px-6">
+          <!-- Section Header -->
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-primary dark:text-primary font-semibold text-lg"
+              >VILLAGE PULSE</span
+            >
+            <h2
+              class="text-3xl md:text-4xl font-bold text-dark dark:text-white mt-2 mb-4"
+            >
+              Why People Choose Pinwatta
+            </h2>
+            <p class="text-slate-600 dark:text-gray-300 text-lg">
+              Understanding the magnetic appeal of our village - from essential
+              amenities to the serene beauty of our coastal location.
+            </p>
+          </div>
+
+          <!-- Amenities Grid -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Schools -->
+            <div
+              class="bg-slate-50 dark:bg-gray-700 p-8 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
+            >
+              <div
+                class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 h-14 w-14 rounded-full flex items-center justify-center mb-5"
+              >
+                <i data-lucide="graduation-cap" class="h-7 w-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-3">
+                Quality Education
+              </h3>
+              <p class="text-slate-600 dark:text-gray-300 mb-4">
+                Access to well-established schools providing quality education
+                from primary through secondary levels.
+              </p>
+              <div class="text-sm text-slate-500 dark:text-gray-400">
+                <span class="font-semibold">Available:</span> Primary &
+                Secondary Schools
+              </div>
+            </div>
+
+            <!-- Healthcare -->
+            <div
+              class="bg-slate-50 dark:bg-gray-700 p-8 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
+            >
+              <div
+                class="bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 h-14 w-14 rounded-full flex items-center justify-center mb-5"
+              >
+                <i data-lucide="heart" class="h-7 w-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-3">
+                Healthcare Access
+              </h3>
+              <p class="text-slate-600 dark:text-gray-300 mb-4">
+                Convenient access to medical facilities and healthcare services
+                for all community members.
+              </p>
+              <div class="text-sm text-slate-500 dark:text-gray-400">
+                <span class="font-semibold">Services:</span> Medical Centers &
+                Clinics
+              </div>
+            </div>
+
+            <!-- Shopping -->
+            <div
+              class="bg-slate-50 dark:bg-gray-700 p-8 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
+            >
+              <div
+                class="bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 h-14 w-14 rounded-full flex items-center justify-center mb-5"
+              >
+                <i data-lucide="shopping-bag" class="h-7 w-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-3">
+                Shopping & Markets
+              </h3>
+              <p class="text-slate-600 dark:text-gray-300 mb-4">
+                Local supermarkets and traditional markets providing daily
+                necessities and fresh produce.
+              </p>
+              <div class="text-sm text-slate-500 dark:text-gray-400">
+                <span class="font-semibold">Options:</span> Supermarkets & Local
+                Markets
+              </div>
+            </div>
+
+            <!-- Religious Centers -->
+            <div
+              class="bg-slate-50 dark:bg-gray-700 p-8 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
+            >
+              <div
+                class="bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 h-14 w-14 rounded-full flex items-center justify-center mb-5"
+              >
+                <i data-lucide="church" class="h-7 w-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-3">
+                Spiritual Centers
+              </h3>
+              <p class="text-slate-600 dark:text-gray-300 mb-4">
+                Rich collection of religious establishments serving diverse
+                faiths and spiritual needs.
+              </p>
+              <div class="text-sm text-slate-500 dark:text-gray-400">
+                <span class="font-semibold">Includes:</span> Temples, Churches &
+                Mosques
+              </div>
+            </div>
+
+            <!-- Beach Access -->
+            <div
+              class="bg-slate-50 dark:bg-gray-700 p-8 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
+            >
+              <div
+                class="bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 h-14 w-14 rounded-full flex items-center justify-center mb-5"
+              >
+                <i data-lucide="waves" class="h-7 w-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-3">
+                Coastal Beauty
+              </h3>
+              <p class="text-slate-600 dark:text-gray-300 mb-4">
+                Direct access to Pinwatta Beach, offering recreation,
+                relaxation, and connection to our maritime heritage.
+              </p>
+              <div class="text-sm text-slate-500 dark:text-gray-400">
+                <span class="font-semibold">Features:</span> Beach Access &
+                Water Sports
+              </div>
+            </div>
+
+            <!-- Elder Care -->
+            <div
+              class="bg-slate-50 dark:bg-gray-700 p-8 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
+            >
+              <div
+                class="bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 h-14 w-14 rounded-full flex items-center justify-center mb-5"
+              >
+                <i data-lucide="users" class="h-7 w-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark dark:text-white mb-3">
+                Elder Care
+              </h3>
+              <p class="text-slate-600 dark:text-gray-300 mb-4">
+                Aloka Elder's Home providing specialized care and support for
+                our senior community members.
+              </p>
+              <div class="text-sm text-slate-500 dark:text-gray-400">
+                <span class="font-semibold">Service:</span> Specialized Elder
+                Care
+              </div>
+            </div>
+          </div>
+
+          <!-- Convenience Factor -->
+          <div
+            class="bg-gradient-to-r from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 rounded-xl p-8 md:p-12"
+          >
+            <div class="text-center mb-8">
+              <h3 class="text-2xl font-bold text-dark dark:text-white mb-4">
+                The Convenience Factor
+              </h3>
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg max-w-3xl mx-auto"
+              >
+                What truly sets Pinwatta apart is not any single attraction, but
+                the seamless integration of all essential services within
+                walking distance, creating a lifestyle of convenience and
+                quality that residents cherish.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== Veins of Access Section =========== -->
+      <section
+        class="py-20 md:py-28 bg-light dark:bg-gray-900 transition-colors duration-300"
+      >
+        <div class="container mx-auto px-6">
+          <!-- Section Header -->
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span
+              class="text-secondary dark:text-secondary font-semibold text-lg"
+              >CONNECTIVITY</span
+            >
+            <h2
+              class="text-3xl md:text-4xl font-bold text-dark dark:text-white mt-2 mb-4"
+            >
+              Veins of Access
+            </h2>
+            <p class="text-slate-600 dark:text-gray-300 text-lg">
+              Pinwatta's strategic transportation networks that connect our
+              village to the wider region and beyond.
+            </p>
+          </div>
+
+          <!-- Transportation Features -->
+          <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 class="text-2xl font-bold text-dark dark:text-white mb-6">
+                Strategic Transportation Hub
+              </h3>
+              <div class="space-y-6">
+                <!-- Galle Road -->
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <i data-lucide="road" class="h-6 w-6"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-dark dark:text-white mb-2">
+                      Galle Road Access
+                    </h4>
+                    <p class="text-slate-600 dark:text-gray-300">
+                      Direct access to the main A2 highway connecting Colombo to
+                      the South, providing seamless travel to major cities and
+                      tourist destinations.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Railway -->
+                <div class="flex items-start">
+                  <div
+                    class="bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <i data-lucide="train" class="h-6 w-6"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-dark dark:text-white mb-2">
+                      Railway Connection
+                    </h4>
+                    <p class="text-slate-600 dark:text-gray-300">
+                      Pinwatta Railway Station on the coastal line provides
+                      affordable and convenient train services to Colombo,
+                      Panadura, and southern destinations.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Bus Services -->
+                <div class="flex items-start">
+                  <div
+                    class="bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <i data-lucide="bus" class="h-6 w-6"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-dark dark:text-white mb-2">
+                      Bus Network
+                    </h4>
+                    <p class="text-slate-600 dark:text-gray-300">
+                      Regular bus services connecting to Panadura, Kalutara,
+                      Colombo, and local destinations with frequent schedules
+                      throughout the day.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img
+                src="https://placehold.co/600x500/14b8a6/ffffff?text=Transportation+Network"
+                alt="Transportation connections in Pinwatta"
+                class="rounded-xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
+
+          <!-- Travel Times -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+            <h3
+              class="text-2xl font-bold text-dark dark:text-white mb-8 text-center"
+            >
+              Travel Times from Pinwatta
+            </h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div class="text-center">
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl">
+                  <div
+                    class="text-2xl font-bold text-primary dark:text-blue-400 mb-2"
+                  >
+                    15 min
+                  </div>
+                  <div class="text-slate-600 dark:text-gray-300">
+                    to Panadura
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl">
+                  <div
+                    class="text-2xl font-bold text-green-600 dark:text-green-400 mb-2"
+                  >
+                    45 min
+                  </div>
+                  <div class="text-slate-600 dark:text-gray-300">
+                    to Colombo
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <div class="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-xl">
+                  <div
+                    class="text-2xl font-bold text-orange-600 dark:text-orange-400 mb-2"
+                  >
+                    30 min
+                  </div>
+                  <div class="text-slate-600 dark:text-gray-300">
+                    to Kalutara
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <div class="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-xl">
+                  <div
+                    class="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2"
+                  >
+                    90 min
+                  </div>
+                  <div class="text-slate-600">to Galle</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== Nature's Embrace Section =========== -->
+      <section
+        class="py-20 md:py-28 bg-white dark:bg-gray-800 transition-colors duration-300"
+      >
+        <div class="container mx-auto px-6">
+          <!-- Section Header -->
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span
+              class="text-green-600 dark:text-green-400 font-semibold text-lg"
+              >ENVIRONMENT</span
+            >
+            <h2
+              class="text-3xl md:text-4xl font-bold text-dark dark:text-white mt-2 mb-4"
+            >
+              Nature's Embrace
+            </h2>
+            <p class="text-slate-600 dark:text-gray-300 text-lg">
+              Understanding Pinwatta's tropical climate, seasonal patterns, and
+              environmental challenges that shape daily life.
+            </p>
+          </div>
+
+          <!-- Climate Overview -->
+          <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-6">
+                Tropical Monsoon Climate
+              </h3>
+              <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                Pinwatta enjoys a warm, humid tropical monsoon climate
+                characterized by distinct wet and dry seasons. The village
+                experiences average temperatures between 25°C to 32°C throughout
+                the year, with high humidity levels typical of coastal Sri
+                Lanka.
+              </p>
+
+              <div class="space-y-4 mb-6">
+                <div class="bg-blue-50 p-4 rounded-lg">
+                  <h4 class="font-bold text-dark mb-2">Southwest Monsoon</h4>
+                  <p class="text-slate-600 text-sm">
+                    May to September - Primary rainy season with heavy rainfall
+                    and strong coastal winds.
+                  </p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h4 class="font-bold text-dark mb-2">Inter-Monsoon</h4>
+                  <p class="text-slate-600 text-sm">
+                    March to April & October to November - Transitional periods
+                    with moderate rainfall.
+                  </p>
+                </div>
+                <div class="bg-orange-50 p-4 rounded-lg">
+                  <h4 class="font-bold text-dark mb-2">Northeast Monsoon</h4>
+                  <p class="text-slate-600 text-sm">
+                    December to February - Drier season with occasional showers
+                    and pleasant temperatures.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img
+                src="https://placehold.co/600x500/22c55e/ffffff?text=Climate+Patterns"
+                alt="Climate patterns in Pinwatta"
+                class="rounded-xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
+
+          <!-- Environmental Challenges -->
+          <div class="bg-slate-50 rounded-xl p-8 md:p-12 mb-16">
+            <h3 class="text-2xl font-bold text-dark mb-8 text-center">
+              Environmental Considerations
+            </h3>
+            <div class="grid md:grid-cols-3 gap-8">
+              <!-- Humidity -->
+              <div class="text-center">
+                <div
+                  class="bg-blue-100 text-blue-600 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                >
+                  <i data-lucide="droplets" class="h-8 w-8"></i>
+                </div>
+                <h4 class="text-xl font-bold text-dark mb-3">High Humidity</h4>
+                <p class="text-slate-600">
+                  Year-round humidity levels of 70-85% typical of coastal
+                  tropical climate.
+                </p>
+              </div>
+
+              <!-- Rainfall -->
+              <div class="text-center">
+                <div
+                  class="bg-gray-100 text-gray-600 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                >
+                  <i data-lucide="cloud-rain" class="h-8 w-8"></i>
+                </div>
+                <h4 class="text-xl font-bold text-dark mb-3">Heavy Rainfall</h4>
+                <p class="text-slate-600">
+                  Monsoon seasons bring intense rainfall requiring proper
+                  drainage systems.
+                </p>
+              </div>
+
+              <!-- Flooding -->
+              <div class="text-center">
+                <div
+                  class="bg-red-100 text-red-600 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                >
+                  <i data-lucide="waves" class="h-8 w-8"></i>
+                </div>
+                <h4 class="text-xl font-bold text-dark mb-3">Flood Risks</h4>
+                <p class="text-slate-600">
+                  Low-lying coastal areas face occasional flooding during
+                  extreme weather events.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========== Community Persona Section =========== -->
+      <section class="py-20 md:py-28 bg-light">
+        <div class="container mx-auto px-6">
+          <!-- Section Header -->
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-purple-600 font-semibold text-lg"
+              >DEMOGRAPHICS</span
+            >
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2 mb-4">
+              The Community's Persona
+            </h2>
+            <p class="text-slate-600 text-lg">
+              Meet the diverse, hardworking people who call Pinwatta home -
+              their backgrounds, occupations, and what unites them as a
+              community.
+            </p>
+          </div>
+
+          <!-- Demographics Overview -->
+          <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <!-- Population Stats -->
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-6">
+                Population by Ethnicity
+              </h3>
+              <div class="space-y-4 mb-8">
+                <!-- Sinhalese -->
+                <div class="stat-card p-4 rounded-lg">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="font-semibold text-dark">Sinhalese</span>
+                    <span class="text-primary font-bold">78%</span>
+                  </div>
+                  <div class="bg-slate-300 rounded-full h-2">
+                    <div
+                      class="progress-bar h-2 rounded-full"
+                      style="width: 78%"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- Tamil -->
+                <div class="stat-card p-4 rounded-lg">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="font-semibold text-dark">Tamil</span>
+                    <span class="text-primary font-bold">12%</span>
+                  </div>
+                  <div class="bg-slate-300 rounded-full h-2">
+                    <div
+                      class="progress-bar h-2 rounded-full"
+                      style="width: 12%"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- Muslim -->
+                <div class="stat-card p-4 rounded-lg">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="font-semibold text-dark">Muslim</span>
+                    <span class="text-primary font-bold">8%</span>
+                  </div>
+                  <div class="bg-slate-300 rounded-full h-2">
+                    <div
+                      class="progress-bar h-2 rounded-full"
+                      style="width: 8%"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- Other -->
+                <div class="stat-card p-4 rounded-lg">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="font-semibold text-dark">Other</span>
+                    <span class="text-primary font-bold">2%</span>
+                  </div>
+                  <div class="bg-slate-300 rounded-full h-2">
+                    <div
+                      class="progress-bar h-2 rounded-full"
+                      style="width: 2%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <p class="text-slate-700 text-sm">
+                  <span class="font-semibold">Community Harmony:</span> Despite
+                  diverse backgrounds, Pinwatta maintains strong intercultural
+                  relationships and mutual respect among all ethnic groups.
+                </p>
+              </div>
+            </div>
+
+            <!-- Employment Stats -->
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-6">
+                Employment Distribution
+              </h3>
+              <div class="space-y-4 mb-8">
+                <!-- Private Sector -->
+                <div class="stat-card p-4 rounded-lg">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="font-semibold text-dark">Private Sector</span>
+                    <span class="text-secondary font-bold">42%</span>
+                  </div>
+                  <div class="bg-slate-300 rounded-full h-2">
+                    <div
+                      class="bg-secondary h-2 rounded-full"
+                      style="width: 42%"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- Self-Employed -->
+                <div class="stat-card p-4 rounded-lg">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="font-semibold text-dark">Self-Employed</span>
+                    <span class="text-secondary font-bold">28%</span>
+                  </div>
+                  <div class="bg-slate-300 rounded-full h-2">
+                    <div
+                      class="bg-secondary h-2 rounded-full"
+                      style="width: 28%"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- Government -->
+                <div class="stat-card p-4 rounded-lg">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="font-semibold text-dark"
+                      >Government Service</span
+                    >
+                    <span class="text-secondary font-bold">23%</span>
+                  </div>
+                  <div class="bg-slate-300 rounded-full h-2">
+                    <div
+                      class="bg-secondary h-2 rounded-full"
+                      style="width: 23%"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- Other -->
+                <div class="stat-card p-4 rounded-lg">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="font-semibold text-dark">Other</span>
+                    <span class="text-secondary font-bold">7%</span>
+                  </div>
+                  <div class="bg-slate-300 rounded-full h-2">
+                    <div
+                      class="bg-secondary h-2 rounded-full"
+                      style="width: 7%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-green-50 p-4 rounded-lg">
+                <p class="text-slate-700 text-sm">
+                  <span class="font-semibold">Economic Diversity:</span> The mix
+                  of private sector workers, entrepreneurs, and public servants
+                  creates a stable and resilient local economy.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Community Character -->
+          <div
+            class="bg-white dark:bg-gray-700 rounded-xl p-8 md:p-12 shadow-lg"
+          >
+            <h3
+              class="text-2xl font-bold text-dark dark:text-white mb-6 text-center"
+            >
+              Community Character
+            </h3>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="text-center">
+                <div
+                  class="bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                >
+                  <i data-lucide="heart" class="h-8 w-8"></i>
+                </div>
+                <h4 class="text-xl font-bold text-dark dark:text-white mb-3">
+                  Unity in Diversity
+                </h4>
+                <p class="text-slate-600 dark:text-gray-300">
+                  Different ethnicities and religions coexist peacefully,
+                  celebrating shared festivals and supporting each other.
+                </p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="bg-blue-100 text-blue-600 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                >
+                  <i data-lucide="briefcase" class="h-8 w-8"></i>
+                </div>
+                <h4 class="text-xl font-bold text-dark mb-3">
+                  Hardworking Spirit
+                </h4>
+                <p class="text-slate-600">
+                  A community of dedicated workers across various sectors,
+                  contributing to local and national development.
+                </p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="bg-green-100 text-green-600 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                >
+                  <i data-lucide="home" class="h-8 w-8"></i>
+                </div>
+                <h4 class="text-xl font-bold text-dark mb-3">Family Values</h4>
+                <p class="text-slate-600">
+                  Strong family ties and community bonds that create a safe,
+                  supportive environment for all generations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========== Footer =========== -->
+    <footer class="bg-dark text-white">
+      <div class="container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- About Column -->
+          <div class="md:col-span-2">
+            <h3 class="text-xl font-bold mb-4">Pinwatta Village Portal</h3>
+            <p class="text-slate-400 max-w-md">
+              Celebrating the rich heritage and vibrant community of Pinwatta,
+              where coastal beauty meets cultural depth in perfect harmony.
+            </p>
+          </div>
+          <!-- Links Column -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Explore</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="about.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >About Pinwatta</a
+                >
+              </li>
+              <li>
+                <a
+                  href="culture.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Culture & Arts</a
+                >
+              </li>
+              <li>
+                <a
+                  href="community.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Our Community</a
+                >
+              </li>
+              <li>
+                <a
+                  href="data.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Maps & Data</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Report Info Column -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Report Info</h3>
+            <p class="text-slate-400 text-sm mb-2">
+              Report by W. K. Y. Aranasinghe
+            </p>
+            <p class="text-slate-400 text-sm mb-4">Student ID: 242343J</p>
+            <p class="text-slate-400 text-xs">
+              PL1105 Assignment - University of Moratuwa
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-12 border-t border-slate-700 pt-8 text-center text-slate-500 text-sm"
+        >
+          <p>&copy; 2025 Pinwatta Village Showcase. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
