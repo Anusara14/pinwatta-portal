@@ -266,7 +266,7 @@
                 Pinwatta Village
               </p>
               <p class="text-slate-500 dark:text-gray-400">
-                Udugampola, Sri Lanka
+                Panadura, Sri Lanka
               </p>
             </div>
 
@@ -337,28 +337,36 @@
                 </p>
               </div>
 
-              <form class="space-y-6">
+              <form id="contact-form" class="space-y-6">
                 <div class="grid md:grid-cols-2 gap-6">
                   <div>
                     <label
+                      for="firstName"
                       class="block text-sm font-semibold text-dark dark:text-white mb-3"
                     >
-                      First Name
+                      First Name *
                     </label>
                     <input
                       type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
                       class="w-full px-4 py-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-dark dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-400 transition-colors duration-200 placeholder:text-gray-400"
                       placeholder="Your first name"
                     />
                   </div>
                   <div>
                     <label
+                      for="lastName"
                       class="block text-sm font-semibold text-dark dark:text-white mb-3"
                     >
-                      Last Name
+                      Last Name *
                     </label>
                     <input
                       type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
                       class="w-full px-4 py-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-dark dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-400 transition-colors duration-200 placeholder:text-gray-400"
                       placeholder="Your last name"
                     />
@@ -367,12 +375,16 @@
 
                 <div>
                   <label
+                    for="email"
                     class="block text-sm font-semibold text-dark dark:text-white mb-3"
                   >
-                    Email Address
+                    Email Address *
                   </label>
                   <input
                     type="email"
+                    id="email"
+                    name="email"
+                    required
                     class="w-full px-4 py-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-dark dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-400 transition-colors duration-200 placeholder:text-gray-400"
                     placeholder="your.email@example.com"
                   />
@@ -380,29 +392,41 @@
 
                 <div>
                   <label
+                    for="subject"
                     class="block text-sm font-semibold text-dark dark:text-white mb-3"
                   >
                     Subject
                   </label>
                   <select
+                    id="subject"
+                    name="subject"
                     class="w-full px-4 py-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-dark dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-400 transition-colors duration-200"
                   >
-                    <option>General Inquiry</option>
-                    <option>Cultural Information</option>
-                    <option>Visit Planning</option>
-                    <option>Community Engagement</option>
-                    <option>Other</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Cultural Information">
+                      Cultural Information
+                    </option>
+                    <option value="Visit Planning">Visit Planning</option>
+                    <option value="Community Engagement">
+                      Community Engagement
+                    </option>
+                    <option value="Media & Research">Media & Research</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
 
                 <div>
                   <label
+                    for="message"
                     class="block text-sm font-semibold text-dark dark:text-white mb-3"
                   >
-                    Message
+                    Message *
                   </label>
                   <textarea
+                    id="message"
+                    name="message"
                     rows="6"
+                    required
                     class="w-full px-4 py-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-dark dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-400 transition-colors duration-200 placeholder:text-gray-400 resize-none"
                     placeholder="Tell us how we can help you..."
                   ></textarea>
@@ -410,10 +434,15 @@
 
                 <button
                   type="submit"
-                  class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-8 py-4 lg:py-5 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:-translate-y-0.5"
+                  id="submit-btn"
+                  class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-8 py-4 lg:py-5 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:-translate-y-0.5 disabled:opacity-75 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   <span class="flex items-center justify-center gap-2">
-                    Send Message
+                    <span
+                      id="submit-spinner"
+                      class="hidden animate-spin rounded-full h-4 w-4 border-b-2 border-white"
+                    ></span>
+                    <span id="submit-text">Send Message</span>
                     <i data-lucide="send" class="h-5 w-5"></i>
                   </span>
                 </button>
@@ -646,6 +675,15 @@
         </div>
       </div>
     </footer>
+
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <!-- Contact Form Handler -->
+    <script src="assets/js/contact.js"></script>
 
     <script>
       // Initialize Lucide Icons
