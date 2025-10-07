@@ -22,6 +22,8 @@ window.tailwindConfig = {
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
+        serif: ["Spectral", "Georgia", "Times", "serif"],
+        display: ["Inter", "sans-serif"],
       },
     },
   },
