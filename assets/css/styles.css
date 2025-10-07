@@ -2,6 +2,24 @@
    Pinwatta Village Portal - Styles
    =========================== */
 
+/* Custom Font Face */
+@font-face {
+  font-family: "PressGothic";
+  src: url("../fonts/pressgothic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* PINWATTA Brand Styling */
+.pinwatta-brand {
+  font-family: "PressGothic", "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", system-ui, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 /* Base Styles */
 body {
   font-family: "Inter", sans-serif;
