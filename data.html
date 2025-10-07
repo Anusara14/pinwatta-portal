@@ -257,58 +257,23 @@
           <div
             class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 mb-12"
           >
-            <div class="map-placeholder rounded-xl p-16 text-center">
-              <div class="max-w-md mx-auto">
-                <div
-                  class="bg-white p-6 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center shadow-lg"
-                >
-                  <i data-lucide="map" class="h-12 w-12 text-primary"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-700 mb-4">
-                  Interactive Map Coming Soon
-                </h3>
-                <p class="text-slate-600 mb-6">
-                  Our interactive map will feature detailed layers showing
-                  roads, amenities, land use, and environmental data for
-                  Pinwatta Village.
-                </p>
-                <div class="grid grid-cols-2 gap-4 text-sm">
-                  <div class="bg-white/80 p-3 rounded-lg">
-                    <i
-                      data-lucide="layers"
-                      class="h-4 w-4 text-blue-600 mb-1"
-                    ></i>
-                    <div class="font-semibold">Multiple Layers</div>
-                  </div>
-                  <div class="bg-white/80 p-3 rounded-lg">
-                    <i
-                      data-lucide="search"
-                      class="h-4 w-4 text-green-600 mb-1"
-                    ></i>
-                    <div class="font-semibold">Search Function</div>
-                  </div>
-                  <div class="bg-white/80 p-3 rounded-lg">
-                    <i
-                      data-lucide="download"
-                      class="h-4 w-4 text-purple-600 mb-1"
-                    ></i>
-                    <div class="font-semibold">Data Export</div>
-                  </div>
-                  <div class="bg-white/80 p-3 rounded-lg">
-                    <i
-                      data-lucide="ruler"
-                      class="h-4 w-4 text-orange-600 mb-1"
-                    ></i>
-                    <div class="font-semibold">Measurements</div>
-                  </div>
-                </div>
-              </div>
+            <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=1DbmTJZnfCShpS08HVMDTiOHmngnNNCA&ehbc=2E312F"
+                width="100%"
+                height="480"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full"
+              ></iframe>
             </div>
           </div>
 
           <!-- Map Features -->
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-slate-50 p-6 rounded-xl">
+            <div class="bg-slate-50 dark:bg-gray-700 p-6 rounded-xl">
               <div
                 class="bg-blue-100 text-blue-600 h-12 w-12 rounded-full flex items-center justify-center mb-4"
               >
@@ -322,7 +287,7 @@
                 precise GPS coordinates.
               </p>
             </div>
-            <div class="bg-slate-50 p-6 rounded-xl">
+            <div class="bg-slate-50 dark:bg-gray-700 p-6 rounded-xl">
               <div
                 class="bg-green-100 text-green-600 h-12 w-12 rounded-full flex items-center justify-center mb-4"
               >
@@ -336,7 +301,7 @@
                 built-in tools.
               </p>
             </div>
-            <div class="bg-slate-50 p-6 rounded-xl">
+            <div class="bg-slate-50 dark:bg-gray-700 p-6 rounded-xl">
               <div
                 class="bg-purple-100 text-purple-600 h-12 w-12 rounded-full flex items-center justify-center mb-4"
               >
@@ -355,7 +320,7 @@
       </section>
 
       <!-- =========== Available Datasets =========== -->
-      <section class="py-20 md:py-28 bg-light">
+      <section class="py-20 md:py-28 bg-light dark:bg-gray-900">
         <div class="container mx-auto px-6">
           <!-- Section Header -->
           <div class="text-center max-w-3xl mx-auto mb-16">
@@ -374,7 +339,7 @@
           <!-- Dataset Categories -->
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             <!-- Demographics -->
-            <div class="dataset-card bg-white p-8 rounded-xl shadow-lg">
+            <div class="dataset-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
               <div
                 class="bg-blue-100 text-blue-600 h-14 w-14 rounded-full flex items-center justify-center mb-6"
               >
@@ -400,7 +365,7 @@
             </div>
 
             <!-- Infrastructure -->
-            <div class="dataset-card bg-white p-8 rounded-xl shadow-lg">
+            <div class="dataset-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
               <div
                 class="bg-green-100 text-green-600 h-14 w-14 rounded-full flex items-center justify-center mb-6"
               >
@@ -426,7 +391,7 @@
             </div>
 
             <!-- Environment -->
-            <div class="dataset-card bg-white p-8 rounded-xl shadow-lg">
+            <div class="dataset-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
               <div
                 class="bg-green-100 text-green-600 h-14 w-14 rounded-full flex items-center justify-center mb-6"
               >
@@ -452,7 +417,7 @@
             </div>
 
             <!-- Land Use -->
-            <div class="dataset-card bg-white p-8 rounded-xl shadow-lg">
+            <div class="dataset-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
               <div
                 class="bg-orange-100 text-orange-600 h-14 w-14 rounded-full flex items-center justify-center mb-6"
               >
@@ -478,7 +443,7 @@
             </div>
 
             <!-- Economic Data -->
-            <div class="dataset-card bg-white p-8 rounded-xl shadow-lg">
+            <div class="dataset-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
               <div
                 class="bg-purple-100 text-purple-600 h-14 w-14 rounded-full flex items-center justify-center mb-6"
               >
@@ -504,7 +469,7 @@
             </div>
 
             <!-- Cultural Heritage -->
-            <div class="dataset-card bg-white p-8 rounded-xl shadow-lg">
+            <div class="dataset-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
               <div
                 class="bg-red-100 text-red-600 h-14 w-14 rounded-full flex items-center justify-center mb-6"
               >
@@ -531,14 +496,14 @@
           </div>
 
           <!-- Data Formats -->
-          <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
             <h3
               class="text-2xl font-bold text-dark dark:text-white mb-6 text-center"
             >
               Available Data Formats
             </h3>
             <div class="grid md:grid-cols-4 gap-6 text-center">
-              <div class="bg-slate-50 p-6 rounded-xl">
+              <div class="bg-slate-50 dark:bg-gray-700 p-6 rounded-xl">
                 <i
                   data-lucide="file-text"
                   class="h-8 w-8 text-blue-600 mx-auto mb-3"
@@ -548,7 +513,7 @@
                   Spreadsheet format
                 </div>
               </div>
-              <div class="bg-slate-50 p-6 rounded-xl">
+              <div class="bg-slate-50 dark:bg-gray-700 p-6 rounded-xl">
                 <i
                   data-lucide="database"
                   class="h-8 w-8 text-green-600 mx-auto mb-3"
@@ -558,7 +523,7 @@
                   GIS spatial data
                 </div>
               </div>
-              <div class="bg-slate-50 p-6 rounded-xl">
+              <div class="bg-slate-50 dark:bg-gray-700 p-6 rounded-xl">
                 <i
                   data-lucide="code"
                   class="h-8 w-8 text-purple-600 mx-auto mb-3"
@@ -568,7 +533,7 @@
                   Web mapping
                 </div>
               </div>
-              <div class="bg-slate-50 p-6 rounded-xl">
+              <div class="bg-slate-50 dark:bg-gray-700 p-6 rounded-xl">
                 <i
                   data-lucide="file-image"
                   class="h-8 w-8 text-orange-600 mx-auto mb-3"
@@ -586,7 +551,7 @@
       </section>
 
       <!-- =========== Data Request Form =========== -->
-      <section class="py-20 md:py-28 bg-white">
+      <section class="py-20 md:py-28 bg-white dark:bg-gray-800">
         <div class="container mx-auto px-6">
           <div class="max-w-4xl mx-auto">
             <!-- Section Header -->
@@ -606,14 +571,14 @@
             </div>
 
             <!-- Form -->
-            <div class="bg-slate-50 rounded-2xl p-8 md:p-12">
+            <div class="bg-slate-50 dark:bg-gray-700 rounded-2xl p-8 md:p-12">
               <form class="space-y-6">
                 <!-- Personal Information -->
                 <div class="grid md:grid-cols-2 gap-6">
                   <div>
                     <label
                       for="firstName"
-                      class="block text-sm font-semibold text-slate-700 mb-2"
+                      class="block text-sm font-semibold text-slate-700 dark:text-gray-300 mb-2"
                       >First Name *</label
                     >
                     <input
@@ -621,13 +586,13 @@
                       id="firstName"
                       name="firstName"
                       required
-                      class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                      class="w-full px-4 py-3 border border-slate-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
                     />
                   </div>
                   <div>
                     <label
                       for="lastName"
-                      class="block text-sm font-semibold text-slate-700 mb-2"
+                      class="block text-sm font-semibold text-slate-700 dark:text-gray-300 mb-2"
                       >Last Name *</label
                     >
                     <input
@@ -635,7 +600,7 @@
                       id="lastName"
                       name="lastName"
                       required
-                      class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                      class="w-full px-4 py-3 border border-slate-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
                     />
                   </div>
                 </div>
@@ -645,7 +610,7 @@
                   <div>
                     <label
                       for="email"
-                      class="block text-sm font-semibold text-slate-700 mb-2"
+                      class="block text-sm font-semibold text-slate-700 dark:text-gray-300 mb-2"
                       >Email Address *</label
                     >
                     <input
@@ -653,20 +618,20 @@
                       id="email"
                       name="email"
                       required
-                      class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                      class="w-full px-4 py-3 border border-slate-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
                     />
                   </div>
                   <div>
                     <label
                       for="organization"
-                      class="block text-sm font-semibold text-slate-700 mb-2"
+                      class="block text-sm font-semibold text-slate-700 dark:text-gray-300 mb-2"
                       >Organization</label
                     >
                     <input
                       type="text"
                       id="organization"
                       name="organization"
-                      class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                      class="w-full px-4 py-3 border border-slate-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
                     />
                   </div>
                 </div>
@@ -675,14 +640,14 @@
                 <div>
                   <label
                     for="dataType"
-                    class="block text-sm font-semibold text-slate-700 mb-2"
+                    class="block text-sm font-semibold text-slate-700 dark:text-gray-300 mb-2"
                     >Data Type Needed *</label
                   >
                   <select
                     id="dataType"
                     name="dataType"
                     required
-                    class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                    class="w-full px-4 py-3 border border-slate-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
                   >
                     <option value="">Select data type...</option>
                     <option value="demographics">Demographics</option>
@@ -699,14 +664,14 @@
                 <div>
                   <label
                     for="purpose"
-                    class="block text-sm font-semibold text-slate-700 mb-2"
+                    class="block text-sm font-semibold text-slate-700 dark:text-gray-300 mb-2"
                     >Purpose of Use *</label
                   >
                   <select
                     id="purpose"
                     name="purpose"
                     required
-                    class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                    class="w-full px-4 py-3 border border-slate-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
                   >
                     <option value="">Select purpose...</option>
                     <option value="research">Academic Research</option>
@@ -723,7 +688,7 @@
                 <div>
                   <label
                     for="description"
-                    class="block text-sm font-semibold text-slate-700 mb-2"
+                    class="block text-sm font-semibold text-slate-700 dark:text-gray-300 mb-2"
                     >Detailed Description *</label
                   >
                   <textarea
@@ -731,7 +696,7 @@
                     name="description"
                     rows="6"
                     required
-                    class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition resize-none"
+                    class="w-full px-4 py-3 border border-slate-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition resize-none"
                     placeholder="Please provide a detailed description of your data requirements, including specific parameters, time periods, geographic areas, and intended use..."
                   ></textarea>
                 </div>
@@ -740,7 +705,7 @@
                 <div>
                   <label
                     for="format"
-                    class="block text-sm font-semibold text-slate-700 mb-2"
+                    class="block text-sm font-semibold text-slate-700 dark:text-gray-300 mb-2"
                     >Preferred Data Format</label
                   >
                   <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3">
@@ -749,36 +714,36 @@
                         type="checkbox"
                         name="format[]"
                         value="csv"
-                        class="w-4 h-4 text-primary border-slate-300 rounded focus:ring-primary"
+                        class="w-4 h-4 text-primary border-slate-300 dark:border-gray-600 rounded focus:ring-primary"
                       />
-                      <span class="ml-2 text-slate-700">CSV</span>
+                      <span class="ml-2 text-slate-700 dark:text-gray-300">CSV</span>
                     </label>
                     <label class="flex items-center">
                       <input
                         type="checkbox"
                         name="format[]"
                         value="shapefile"
-                        class="w-4 h-4 text-primary border-slate-300 rounded focus:ring-primary"
+                        class="w-4 h-4 text-primary border-slate-300 dark:border-gray-600 rounded focus:ring-primary"
                       />
-                      <span class="ml-2 text-slate-700">Shapefile</span>
+                      <span class="ml-2 text-slate-700 dark:text-gray-300">Shapefile</span>
                     </label>
                     <label class="flex items-center">
                       <input
                         type="checkbox"
                         name="format[]"
                         value="geojson"
-                        class="w-4 h-4 text-primary border-slate-300 rounded focus:ring-primary"
+                        class="w-4 h-4 text-primary border-slate-300 dark:border-gray-600 rounded focus:ring-primary"
                       />
-                      <span class="ml-2 text-slate-700">GeoJSON</span>
+                      <span class="ml-2 text-slate-700 dark:text-gray-300">GeoJSON</span>
                     </label>
                     <label class="flex items-center">
                       <input
                         type="checkbox"
                         name="format[]"
                         value="pdf"
-                        class="w-4 h-4 text-primary border-slate-300 rounded focus:ring-primary"
+                        class="w-4 h-4 text-primary border-slate-300 dark:border-gray-600 rounded focus:ring-primary"
                       />
-                      <span class="ml-2 text-slate-700">PDF Report</span>
+                      <span class="ml-2 text-slate-700 dark:text-gray-300">PDF Report</span>
                     </label>
                   </div>
                 </div>
@@ -791,7 +756,7 @@
                   >
                     Submit Data Request
                   </button>
-                  <p class="text-slate-500 text-sm mt-3">
+                  <p class="text-slate-500 dark:text-gray-400 text-sm mt-3">
                     We'll respond to your request within 48 hours
                   </p>
                 </div>
@@ -802,14 +767,14 @@
       </section>
 
       <!-- =========== Data Usage Guidelines =========== -->
-      <section class="py-20 md:py-28 bg-light">
+      <section class="py-20 md:py-28 bg-light dark:bg-gray-900">
         <div class="container mx-auto px-6">
           <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
-              <h2 class="text-3xl font-bold text-dark mb-4">
+              <h2 class="text-3xl font-bold text-dark dark:text-white mb-4">
                 Data Usage Guidelines
               </h2>
-              <p class="text-slate-600 text-lg">
+              <p class="text-slate-600 dark:text-gray-300 text-lg">
                 Please review our guidelines for responsible data use and
                 attribution requirements.
               </p>
@@ -817,14 +782,14 @@
 
             <div class="grid md:grid-cols-2 gap-8">
               <!-- Usage Rights -->
-              <div class="bg-white p-8 rounded-xl shadow-lg">
+              <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
                 <div
                   class="bg-green-100 text-green-600 h-12 w-12 rounded-full flex items-center justify-center mb-4"
                 >
                   <i data-lucide="check-circle" class="h-6 w-6"></i>
                 </div>
-                <h3 class="text-xl font-bold text-dark mb-4">Permitted Uses</h3>
-                <ul class="space-y-2 text-slate-600">
+                <h3 class="text-xl font-bold text-dark dark:text-white mb-4">Permitted Uses</h3>
+                <ul class="space-y-2 text-slate-600 dark:text-gray-300">
                   <li class="flex items-start">
                     <i
                       data-lucide="check"
@@ -857,18 +822,18 @@
               </div>
 
               <!-- Attribution -->
-              <div class="bg-white p-8 rounded-xl shadow-lg">
+              <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
                 <div
                   class="bg-blue-100 text-blue-600 h-12 w-12 rounded-full flex items-center justify-center mb-4"
                 >
                   <i data-lucide="info" class="h-6 w-6"></i>
                 </div>
-                <h3 class="text-xl font-bold text-dark mb-4">
+                <h3 class="text-xl font-bold text-dark dark:text-white mb-4">
                   Attribution Requirements
                 </h3>
-                <div class="text-slate-600">
+                <div class="text-slate-600 dark:text-gray-300">
                   <p class="mb-4">When using our data, please include:</p>
-                  <div class="bg-slate-50 p-4 rounded-lg text-sm font-mono">
+                  <div class="bg-slate-50 dark:bg-gray-600 p-4 rounded-lg text-sm font-mono dark:text-gray-200">
                     "Data source: Pinwatta Village Portal<br />
                     PL1105 Village Study<br />
                     Anusara Ranasinghe (242343J)<br />
@@ -921,6 +886,41 @@
               </li>
               <li>
                 <a
+                  href="data.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Maps & Data</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-slate-400 hover:text-white transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Author info Column -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Author info</h3>
+            <p class="text-slate-400 text-sm mb-2">Anusara Ranasinghe</p>
+            <p class="text-slate-400 text-sm mb-4">Student ID: 242343J</p>
+          </div>
+        </div>
+        <div
+          class="mt-12 border-t border-slate-700 pt-8 text-center text-slate-500 text-sm"
+        >
+          <p>&copy; 2025 Pinwatta Village Showcase. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
                   href="data.html"
                   class="text-slate-400 hover:text-white transition"
                   >Maps & Data</a

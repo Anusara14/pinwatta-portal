@@ -27,6 +27,9 @@
       .stat-card {
         background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
       }
+      .dark .stat-card {
+        background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+      }
       .progress-bar {
         background: linear-gradient(90deg, #0ea5e9 0%, #14b8a6 100%);
       }
@@ -586,10 +589,12 @@
           <!-- Climate Overview -->
           <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h3 class="text-2xl font-bold text-dark mb-6">
+              <h3 class="text-2xl font-bold text-dark dark:text-white mb-6">
                 Tropical Monsoon Climate
               </h3>
-              <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+              <p
+                class="text-slate-600 dark:text-gray-300 text-lg mb-6 leading-relaxed"
+              >
                 Pinwatta enjoys a warm, humid tropical monsoon climate
                 characterized by distinct wet and dry seasons. The village
                 experiences average temperatures between 25°C to 32°C throughout
@@ -598,23 +603,29 @@
               </p>
 
               <div class="space-y-4 mb-6">
-                <div class="bg-blue-50 p-4 rounded-lg">
-                  <h4 class="font-bold text-dark mb-2">Southwest Monsoon</h4>
-                  <p class="text-slate-600 text-sm">
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                  <h4 class="font-bold text-dark dark:text-white mb-2">
+                    Southwest Monsoon
+                  </h4>
+                  <p class="text-slate-600 dark:text-gray-300 text-sm">
                     May to September - Primary rainy season with heavy rainfall
                     and strong coastal winds.
                   </p>
                 </div>
-                <div class="bg-green-50 p-4 rounded-lg">
-                  <h4 class="font-bold text-dark mb-2">Inter-Monsoon</h4>
-                  <p class="text-slate-600 text-sm">
+                <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                  <h4 class="font-bold text-dark dark:text-white mb-2">
+                    Inter-Monsoon
+                  </h4>
+                  <p class="text-slate-600 dark:text-gray-300 text-sm">
                     March to April & October to November - Transitional periods
                     with moderate rainfall.
                   </p>
                 </div>
-                <div class="bg-orange-50 p-4 rounded-lg">
-                  <h4 class="font-bold text-dark mb-2">Northeast Monsoon</h4>
-                  <p class="text-slate-600 text-sm">
+                <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
+                  <h4 class="font-bold text-dark dark:text-white mb-2">
+                    Northeast Monsoon
+                  </h4>
+                  <p class="text-slate-600 dark:text-gray-300 text-sm">
                     December to February - Drier season with occasional showers
                     and pleasant temperatures.
                   </p>
@@ -631,20 +642,26 @@
           </div>
 
           <!-- Environmental Challenges -->
-          <div class="bg-slate-50 rounded-xl p-8 md:p-12 mb-16">
-            <h3 class="text-2xl font-bold text-dark mb-8 text-center">
+          <div
+            class="bg-slate-50 dark:bg-gray-700 rounded-xl p-8 md:p-12 mb-16"
+          >
+            <h3
+              class="text-2xl font-bold text-dark dark:text-white mb-8 text-center"
+            >
               Environmental Considerations
             </h3>
             <div class="grid md:grid-cols-3 gap-8">
               <!-- Humidity -->
               <div class="text-center">
                 <div
-                  class="bg-blue-100 text-blue-600 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                  class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
                 >
                   <i data-lucide="droplets" class="h-8 w-8"></i>
                 </div>
-                <h4 class="text-xl font-bold text-dark mb-3">High Humidity</h4>
-                <p class="text-slate-600">
+                <h4 class="text-xl font-bold text-dark dark:text-white mb-3">
+                  High Humidity
+                </h4>
+                <p class="text-slate-600 dark:text-gray-300">
                   Year-round humidity levels of 70-85% typical of coastal
                   tropical climate.
                 </p>
@@ -653,12 +670,14 @@
               <!-- Rainfall -->
               <div class="text-center">
                 <div
-                  class="bg-gray-100 text-gray-600 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                  class="bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-300 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
                 >
                   <i data-lucide="cloud-rain" class="h-8 w-8"></i>
                 </div>
-                <h4 class="text-xl font-bold text-dark mb-3">Heavy Rainfall</h4>
-                <p class="text-slate-600">
+                <h4 class="text-xl font-bold text-dark dark:text-white mb-3">
+                  Heavy Rainfall
+                </h4>
+                <p class="text-slate-600 dark:text-gray-300">
                   Monsoon seasons bring intense rainfall requiring proper
                   drainage systems.
                 </p>
@@ -667,12 +686,14 @@
               <!-- Flooding -->
               <div class="text-center">
                 <div
-                  class="bg-red-100 text-red-600 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                  class="bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
                 >
                   <i data-lucide="waves" class="h-8 w-8"></i>
                 </div>
-                <h4 class="text-xl font-bold text-dark mb-3">Flood Risks</h4>
-                <p class="text-slate-600">
+                <h4 class="text-xl font-bold text-dark dark:text-white mb-3">
+                  Flood Risks
+                </h4>
+                <p class="text-slate-600 dark:text-gray-300">
                   Low-lying coastal areas face occasional flooding during
                   extreme weather events.
                 </p>
@@ -683,17 +704,20 @@
       </section>
 
       <!-- =========== Community Persona Section =========== -->
-      <section class="py-20 md:py-28 bg-light">
+      <section class="py-20 md:py-28 bg-light dark:bg-gray-900">
         <div class="container mx-auto px-6">
           <!-- Section Header -->
           <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-purple-600 font-semibold text-lg"
+            <span
+              class="text-purple-600 dark:text-purple-400 font-semibold text-lg"
               >DEMOGRAPHICS</span
             >
-            <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2 mb-4">
+            <h2
+              class="text-3xl md:text-4xl font-bold text-dark dark:text-white mt-2 mb-4"
+            >
               The Community's Persona
             </h2>
-            <p class="text-slate-600 text-lg">
+            <p class="text-slate-600 dark:text-gray-300 text-lg">
               Meet the diverse, hardworking people who call Pinwatta home -
               their backgrounds, occupations, and what unites them as a
               community.
@@ -704,17 +728,19 @@
           <div class="grid lg:grid-cols-2 gap-12 mb-16">
             <!-- Population Stats -->
             <div>
-              <h3 class="text-2xl font-bold text-dark mb-6">
+              <h3 class="text-2xl font-bold text-dark dark:text-white mb-6">
                 Population by Ethnicity
               </h3>
               <div class="space-y-4 mb-8">
                 <!-- Sinhalese -->
                 <div class="stat-card p-4 rounded-lg">
                   <div class="flex justify-between items-center mb-2">
-                    <span class="font-semibold text-dark">Sinhalese</span>
+                    <span class="font-semibold text-dark dark:text-white"
+                      >Sinhalese</span
+                    >
                     <span class="text-primary font-bold">78%</span>
                   </div>
-                  <div class="bg-slate-300 rounded-full h-2">
+                  <div class="bg-slate-300 dark:bg-gray-600 rounded-full h-2">
                     <div
                       class="progress-bar h-2 rounded-full"
                       style="width: 78%"
@@ -725,10 +751,12 @@
                 <!-- Tamil -->
                 <div class="stat-card p-4 rounded-lg">
                   <div class="flex justify-between items-center mb-2">
-                    <span class="font-semibold text-dark">Tamil</span>
+                    <span class="font-semibold text-dark dark:text-white"
+                      >Tamil</span
+                    >
                     <span class="text-primary font-bold">12%</span>
                   </div>
-                  <div class="bg-slate-300 rounded-full h-2">
+                  <div class="bg-slate-300 dark:bg-gray-600 rounded-full h-2">
                     <div
                       class="progress-bar h-2 rounded-full"
                       style="width: 12%"
@@ -739,10 +767,12 @@
                 <!-- Muslim -->
                 <div class="stat-card p-4 rounded-lg">
                   <div class="flex justify-between items-center mb-2">
-                    <span class="font-semibold text-dark">Muslim</span>
+                    <span class="font-semibold text-dark dark:text-white"
+                      >Muslim</span
+                    >
                     <span class="text-primary font-bold">8%</span>
                   </div>
-                  <div class="bg-slate-300 rounded-full h-2">
+                  <div class="bg-slate-300 dark:bg-gray-600 rounded-full h-2">
                     <div
                       class="progress-bar h-2 rounded-full"
                       style="width: 8%"
@@ -753,10 +783,12 @@
                 <!-- Other -->
                 <div class="stat-card p-4 rounded-lg">
                   <div class="flex justify-between items-center mb-2">
-                    <span class="font-semibold text-dark">Other</span>
+                    <span class="font-semibold text-dark dark:text-white"
+                      >Other</span
+                    >
                     <span class="text-primary font-bold">2%</span>
                   </div>
-                  <div class="bg-slate-300 rounded-full h-2">
+                  <div class="bg-slate-300 dark:bg-gray-600 rounded-full h-2">
                     <div
                       class="progress-bar h-2 rounded-full"
                       style="width: 2%"
@@ -765,8 +797,8 @@
                 </div>
               </div>
 
-              <div class="bg-blue-50 p-4 rounded-lg">
-                <p class="text-slate-700 text-sm">
+              <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                <p class="text-slate-700 dark:text-gray-300 text-sm">
                   <span class="font-semibold">Community Harmony:</span> Despite
                   diverse backgrounds, Pinwatta maintains strong intercultural
                   relationships and mutual respect among all ethnic groups.
@@ -776,17 +808,19 @@
 
             <!-- Employment Stats -->
             <div>
-              <h3 class="text-2xl font-bold text-dark mb-6">
+              <h3 class="text-2xl font-bold text-dark dark:text-white mb-6">
                 Employment Distribution
               </h3>
               <div class="space-y-4 mb-8">
                 <!-- Private Sector -->
                 <div class="stat-card p-4 rounded-lg">
                   <div class="flex justify-between items-center mb-2">
-                    <span class="font-semibold text-dark">Private Sector</span>
+                    <span class="font-semibold text-dark dark:text-white"
+                      >Private Sector</span
+                    >
                     <span class="text-secondary font-bold">42%</span>
                   </div>
-                  <div class="bg-slate-300 rounded-full h-2">
+                  <div class="bg-slate-300 dark:bg-gray-600 rounded-full h-2">
                     <div
                       class="bg-secondary h-2 rounded-full"
                       style="width: 42%"
@@ -797,10 +831,12 @@
                 <!-- Self-Employed -->
                 <div class="stat-card p-4 rounded-lg">
                   <div class="flex justify-between items-center mb-2">
-                    <span class="font-semibold text-dark">Self-Employed</span>
+                    <span class="font-semibold text-dark dark:text-white"
+                      >Self-Employed</span
+                    >
                     <span class="text-secondary font-bold">28%</span>
                   </div>
-                  <div class="bg-slate-300 rounded-full h-2">
+                  <div class="bg-slate-300 dark:bg-gray-600 rounded-full h-2">
                     <div
                       class="bg-secondary h-2 rounded-full"
                       style="width: 28%"
@@ -811,12 +847,12 @@
                 <!-- Government -->
                 <div class="stat-card p-4 rounded-lg">
                   <div class="flex justify-between items-center mb-2">
-                    <span class="font-semibold text-dark"
+                    <span class="font-semibold text-dark dark:text-white"
                       >Government Service</span
                     >
                     <span class="text-secondary font-bold">23%</span>
                   </div>
-                  <div class="bg-slate-300 rounded-full h-2">
+                  <div class="bg-slate-300 dark:bg-gray-600 rounded-full h-2">
                     <div
                       class="bg-secondary h-2 rounded-full"
                       style="width: 23%"
@@ -827,10 +863,12 @@
                 <!-- Other -->
                 <div class="stat-card p-4 rounded-lg">
                   <div class="flex justify-between items-center mb-2">
-                    <span class="font-semibold text-dark">Other</span>
+                    <span class="font-semibold text-dark dark:text-white"
+                      >Other</span
+                    >
                     <span class="text-secondary font-bold">7%</span>
                   </div>
-                  <div class="bg-slate-300 rounded-full h-2">
+                  <div class="bg-slate-300 dark:bg-gray-600 rounded-full h-2">
                     <div
                       class="bg-secondary h-2 rounded-full"
                       style="width: 7%"
@@ -839,8 +877,8 @@
                 </div>
               </div>
 
-              <div class="bg-green-50 p-4 rounded-lg">
-                <p class="text-slate-700 text-sm">
+              <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                <p class="text-slate-700 dark:text-gray-300 text-sm">
                   <span class="font-semibold">Economic Diversity:</span> The mix
                   of private sector workers, entrepreneurs, and public servants
                   creates a stable and resilient local economy.
@@ -879,22 +917,24 @@
                 >
                   <i data-lucide="briefcase" class="h-8 w-8"></i>
                 </div>
-                <h4 class="text-xl font-bold text-dark mb-3">
+                <h4 class="text-xl font-bold text-dark dark:text-white mb-3">
                   Hardworking Spirit
                 </h4>
-                <p class="text-slate-600">
+                <p class="text-slate-600 dark:text-gray-300">
                   A community of dedicated workers across various sectors,
                   contributing to local and national development.
                 </p>
               </div>
               <div class="text-center">
                 <div
-                  class="bg-green-100 text-green-600 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
+                  class="bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto"
                 >
                   <i data-lucide="home" class="h-8 w-8"></i>
                 </div>
-                <h4 class="text-xl font-bold text-dark mb-3">Family Values</h4>
-                <p class="text-slate-600">
+                <h4 class="text-xl font-bold text-dark dark:text-white mb-3">
+                  Family Values
+                </h4>
+                <p class="text-slate-600 dark:text-gray-300">
                   Strong family ties and community bonds that create a safe,
                   supportive environment for all generations.
                 </p>
